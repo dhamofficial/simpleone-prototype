@@ -1,0 +1,44 @@
+<div>
+        <div class="form-group">
+            <label>Symptom</label>
+            <div>
+                <input type="text" class="form-control" ng-model="Ticket.Symptom">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <div>
+                <textarea type="text" class="form-control" ng-model="Ticket.Description"></textarea>
+            </div>            
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" ng-click="SaveTicket()">Submit</button>
+            <button class="btn btn-default">Clear</button>
+        </div>
+        
+        <div class="form-group">
+            <div>
+                <input type="text" class="form-control" ng-model="searchfield">
+            </div>            
+        </div>
+        
+        <table class="table table-striped">
+            <tr>
+                <th>TicketNo</th>
+                <th>Symptom</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="ticket in TicketList | filter:searchfield track by $index">
+                <td>
+                    <a href ng-bind="ticket.TicketNo" ng-click="edit($index)"></a>
+                </td>
+                <td ng-bind="ticket.Symptom"></td>
+                <td ng-bind="ticket.Description"></td>
+                <td>
+                    <a class="btn btn-primary" ng-click="edit($index)" href>Edit</a>
+                    <a class="btn btn-danger" ng-click="delete($index)" href>Delete</a>
+                </td>
+            </tr>
+        </table>
+        </div>
