@@ -1,4 +1,3 @@
-# materia
-A Bootstrap theme inspired by Google Material Design.
+# simpleone
+material style prototype for ticket system
 
-A preview is available [here](http://jotrdl.github.io/materia/).
