@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngapp">
   <head>
     <meta charset="utf-8">
     <title>simpleone - prototype for ticket system</title>
@@ -12,13 +12,6 @@
 
     <link rel="stylesheet" href="materia.css" type="text/css">
      <link rel="stylesheet" href="css/app.css" type="text/css">
-      
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.mtr-ripple.js"></script>
-    <script src="js/jquery.mtr-panel.js"></script>
-    <script src="js/jquery.mtr-header.js"></script>
 
     <!--
     <link rel="stylesheet" href="dist/materia.css" type="text/css">
@@ -51,7 +44,6 @@
 
     <!-- top navbar -->
 
-
     <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                   <div class="navbar-header">
@@ -61,198 +53,46 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#">SimpleOne</a>
                   </div>
 
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                      <li><a href="#">Link</a></li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Action</a></li>
-                          <li><a href="#">Another action</a></li>
-                          <li><a href="#">Something else here</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Separated link</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">One more separated link</a></li>
-                        </ul>
-                      </li>
+                      <li class="active"><a href="#">Incidents</a></li>
+                      <li><a href="#">Requests</a></li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#">Link</a></li>
-                    </ul>
+
                   </div>
                 </div>
               </nav>
 
     <div class="container-fluid">
 
-
-      <!-- Forms
-      ================================================== -->
       <div class="bs-docs-section">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="forms">Forms</h1>
+              <h3 id="forms">What's your problem?</h3>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
-            <div class="well mtr-white bs-component">
-              <form class="form-horizontal" action="/" method="GET">
-                <fieldset>
-                  <legend>Legend</legend>
-                  <div class="form-group">
-                    <label class="col-lg-2 control-label">Inputs default</label>
-                    <div class="col-lg-10">
-                      <label for="inputEmail" class="">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" validate required name="email"> 
-                      <span class="error-block">Enter a valid email.</span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <label for="inputPassword" class="">Password</label>
-                      <input type="password" class="form-control" id="inputPassword">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Checkbox
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <label for="textArea">Textarea</label>
-                      <textarea class="form-control" rows="3" id="textArea"></textarea>
-                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-lg-2 control-label">Floating inputs</label>
-                    <div class="col-lg-10" style="margin-top: 30px">
-                      <input type="text" class="form-control floating" id="inputEmail">
-                      <label for="inputEmail" class="">Email</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-lg-2 control-label"></label>
-                    <div class="col-lg-10">
-                      <textarea class="form-control floating" rows="3" id="textArea"></textarea>
-                      <label for="textArea">Textarea floating</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-lg-2 control-label">Radios</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                          Option one is this
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
-                    <div class="col-lg-10">
-                      <select class="form-control" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                      <br>
-                      <select multiple="" class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-12 text-right">
-                      <button type="reset" class="btn btn-flat btn-primary">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
           <div class="col-lg-4 col-lg-offset-1">
 
               <form class="bs-component">
-                <div class="form-group">
-                  <label class="control-label" for="focusedInput">Focused input</label>
-                  <input class="form-control" id="focusedInput" type="text" value="This is focused...">
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label" for="disabledInput">Disabled input</label>
-                  <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
-                </div>
-
-                <div class="form-group has-warning">
-                  <label class="control-label" for="inputWarning">Input warning</label>
-                  <input type="text" class="form-control" id="inputWarning">
-                </div>
-
-                <div class="form-group has-error">
-                  <label class="control-label" for="inputError">Input error</label>
-                  <input type="text" class="form-control" id="inputError">
-                </div>
-
-                <div class="form-group has-success">
-                  <label class="control-label" for="inputSuccess">Input success</label>
-                  <input type="text" class="form-control" id="inputSuccess">
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label" for="inputLarge">Large input</label>
+               <div class="form-group">
+                  <label class="control-label" for="inputLarge">Problem</label>
                   <input class="form-control input-lg" type="text" id="inputLarge">
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" for="inputDefault">Default input</label>
-                  <input type="text" class="form-control" id="inputDefault">
+                  <label class="control-label" for="inputDefault">Detail</label>
+                  <textarea class="form-control input-lg"></textarea>
                 </div>
-
-                <div class="form-group">
-                  <label class="control-label" for="inputSmall">Small input</label>
-                  <input class="form-control input-sm" type="text" id="inputSmall">
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label">Input addons</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">$</span>
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                      <button class="btn btn-flat btn-primary" type="button">Button</button>
-                    </span>
-                  </div>
+               <div class="form-group">
+                  <label class="control-label" for="inputLarge">Any attachment?</label>
+                  <input type="file" class="form-control file">
                 </div>
               </form>
 
@@ -261,7 +101,14 @@
       </div>
 
     </div>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mtr-ripple.js"></script>
+    <script src="js/jquery.mtr-panel.js"></script>
+    <script src="js/jquery.mtr-header.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <script src="js/app.js">
     </script>
   </body>
