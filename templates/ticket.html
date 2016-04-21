@@ -1,1 +1,8 @@
-<tpl-service-mgmt module="Incident"></tpl-service-mgmt>
+<button class="btn btn-success" ng-click="showModal2 = true">Create</button>
+            <modal visible="showModal2" backdrop="">
+                <modal-header title="What's your problem?" fns="fn"></modal-header>
+                <modal-body>
+                    <tpl-service-mgmt module="Incident" shown="showModal2"></tpl-service-mgmt>
+                </modal-body>
+            </modal>
+<tpl-service-mgmt-list></tpl-service-mgmt-list>

@@ -1,0 +1,24 @@
+<div class="bs-docs-section">
+    <div class="row">
+      <div class="col-lg-12">
+
+          <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Problem</th>
+      <th>Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in list">
+      <td>1</td>
+      <td ng-bind-html="row.Problem"></td>
+        <td ng-bind-html="row.Detail"></td>
+    </tr>
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
