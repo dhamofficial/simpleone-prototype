@@ -1,44 +1,29 @@
-<div>
-        <div class="form-group">
-            <label>Symptom</label>
-            <div>
-                <input type="text" class="form-control" ng-model="Ticket.Symptom">
+<div class="bs-docs-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h3 id="forms">What's your problem?</h3>
             </div>
+          </div>
         </div>
-        <div class="form-group">
-            <label>Description</label>
-            <div>
-                <textarea type="text" class="form-control" ng-model="Ticket.Description"></textarea>
-            </div>            
+
+        <div class="row">
+          <div class="col-lg-6">
+
+              <form class="bs-component">
+               <div class="form-group">
+                  <label class="control-label" for="inputLarge">Problem</label>
+                  <input class="form-control" type="text" id="inputLarge" ng-model="Form.Problem">
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="inputDefault">Detail</label>
+                  <textarea class="form-control" rows="10" ng-model="Form.Detail"></textarea>
+                </div>
+                  <div class="form-group">
+                  <button class="btn btn-primary">Submit</button>
+                      <button class="btn btn-default">Cancel</button>
+                </div>
+              </form>
+          </div>
         </div>
-        <div class="form-group">
-            <button class="btn btn-success" ng-click="SaveTicket()">Submit</button>
-            <button class="btn btn-default">Clear</button>
-        </div>
-        
-        <div class="form-group">
-            <div>
-                <input type="text" class="form-control" ng-model="searchfield">
-            </div>            
-        </div>
-        
-        <table class="table table-striped">
-            <tr>
-                <th>TicketNo</th>
-                <th>Symptom</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-            <tr ng-repeat="ticket in TicketList | filter:searchfield track by $index">
-                <td>
-                    <a href ng-bind="ticket.TicketNo" ng-click="edit($index)"></a>
-                </td>
-                <td ng-bind="ticket.Symptom"></td>
-                <td ng-bind="ticket.Description"></td>
-                <td>
-                    <a class="btn btn-primary" ng-click="edit($index)" href>Edit</a>
-                    <a class="btn btn-danger" ng-click="delete($index)" href>Delete</a>
-                </td>
-            </tr>
-        </table>
-        </div>
+      </div>

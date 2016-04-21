@@ -58,7 +58,7 @@ myapp.directive('tplServiceMgmt', ['myutilities',function (utiles) {
                 console.log('invoke end');
             }
 
-            $scope.GetList();
+            //$scope.GetList();
 
         }]
     }
