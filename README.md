@@ -1,2 +1,4 @@
-# simpleone - Prototype for Ticketing system
-Only for education purpose. Not for commercial.
+# materia
+A Bootstrap theme inspired by Google Material Design.
+
+A preview is available [here](http://jotrdl.github.io/materia/).
